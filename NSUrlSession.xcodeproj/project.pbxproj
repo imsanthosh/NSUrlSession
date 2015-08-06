@@ -14,6 +14,9 @@
 		7FB306001B70E923006C5F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB305FF1B70E923006C5F41 /* Images.xcassets */; };
 		7FB306031B70E923006C5F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB306011B70E923006C5F41 /* LaunchScreen.xib */; };
 		7FB3060F1B70E923006C5F41 /* NSUrlSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3060E1B70E923006C5F41 /* NSUrlSessionTests.m */; };
+		7FB3061A1B70E968006C5F41 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB306191B70E968006C5F41 /* WebServiceManager.m */; };
+		7FB3061D1B70EC2B006C5F41 /* WebServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */; };
+		7FB306211B70F448006C5F41 /* NUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB306201B70F448006C5F41 /* NUCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 		7FB306081B70E923006C5F41 /* NSUrlSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUrlSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB3060D1B70E923006C5F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB3060E1B70E923006C5F41 /* NSUrlSessionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUrlSessionTests.m; sourceTree = "<group>"; };
+		7FB306181B70E968006C5F41 /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
+		7FB306191B70E968006C5F41 /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
+		7FB3061B1B70EC2B006C5F41 /* WebServiceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceParser.h; sourceTree = "<group>"; };
+		7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceParser.m; sourceTree = "<group>"; };
+		7FB3061E1B70ED19006C5F41 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7FB3061F1B70F448006C5F41 /* NUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUCategory.h; sourceTree = "<group>"; };
+		7FB306201B70F448006C5F41 /* NUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,13 @@
 			children = (
 				7FB305F61B70E923006C5F41 /* AppDelegate.h */,
 				7FB305F71B70E923006C5F41 /* AppDelegate.m */,
+				7FB306181B70E968006C5F41 /* WebServiceManager.h */,
+				7FB306191B70E968006C5F41 /* WebServiceManager.m */,
+				7FB3061B1B70EC2B006C5F41 /* WebServiceParser.h */,
+				7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */,
+				7FB3061F1B70F448006C5F41 /* NUCategory.h */,
+				7FB306201B70F448006C5F41 /* NUCategory.m */,
+				7FB3061E1B70ED19006C5F41 /* Constants.h */,
 				7FB305F91B70E923006C5F41 /* ViewController.h */,
 				7FB305FA1B70E923006C5F41 /* ViewController.m */,
 				7FB305FC1B70E923006C5F41 /* Main.storyboard */,
@@ -219,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB3061A1B70E968006C5F41 /* WebServiceManager.m in Sources */,
+				7FB306211B70F448006C5F41 /* NUCategory.m in Sources */,
 				7FB305FB1B70E923006C5F41 /* ViewController.m in Sources */,
 				7FB305F81B70E923006C5F41 /* AppDelegate.m in Sources */,
+				7FB3061D1B70EC2B006C5F41 /* WebServiceParser.m in Sources */,
 				7FB305F51B70E923006C5F41 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
