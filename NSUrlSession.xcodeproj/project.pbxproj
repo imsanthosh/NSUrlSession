@@ -17,6 +17,9 @@
 		7FB3061A1B70E968006C5F41 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB306191B70E968006C5F41 /* WebServiceManager.m */; };
 		7FB3061D1B70EC2B006C5F41 /* WebServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */; };
 		7FB306211B70F448006C5F41 /* NUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB306201B70F448006C5F41 /* NUCategory.m */; };
+		7FFF51781B73615B0009E037 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF51771B73615B0009E037 /* ImageDownloader.m */; };
+		7FFF517C1B73829D0009E037 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF517B1B73829D0009E037 /* ImageCache.m */; };
+		7FFF517F1B7386A10009E037 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF517E1B7386A10009E037 /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,13 @@
 		7FB3061E1B70ED19006C5F41 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		7FB3061F1B70F448006C5F41 /* NUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUCategory.h; sourceTree = "<group>"; };
 		7FB306201B70F448006C5F41 /* NUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUCategory.m; sourceTree = "<group>"; };
+		7FFF51761B73615B0009E037 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		7FFF51771B73615B0009E037 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		7FFF51791B73634A0009E037 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		7FFF517A1B73829D0009E037 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		7FFF517B1B73829D0009E037 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		7FFF517D1B7386A10009E037 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		7FFF517E1B7386A10009E037 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F1EF1A81B7898C90036B6FA /* ImageDownload */ = {
+			isa = PBXGroup;
+			children = (
+				7FFF51761B73615B0009E037 /* ImageDownloader.h */,
+				7FFF51771B73615B0009E037 /* ImageDownloader.m */,
+				7FFF517A1B73829D0009E037 /* ImageCache.h */,
+				7FFF517B1B73829D0009E037 /* ImageCache.m */,
+			);
+			name = ImageDownload;
+			sourceTree = "<group>";
+		};
+		7F1EF1AA1B7898E90036B6FA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7FFF517D1B7386A10009E037 /* NSString+Additions.h */,
+				7FFF517E1B7386A10009E037 /* NSString+Additions.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		7F1EF1AB1B7899020036B6FA /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				7FB306181B70E968006C5F41 /* WebServiceManager.h */,
+				7FB306191B70E968006C5F41 /* WebServiceManager.m */,
+				7FB3061B1B70EC2B006C5F41 /* WebServiceParser.h */,
+				7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		7F1EF1AC1B7899140036B6FA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3061E1B70ED19006C5F41 /* Constants.h */,
+				7FFF51791B73634A0009E037 /* Protocols.h */,
+				7F1EF1AA1B7898E90036B6FA /* Category */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		7F1EF1AD1B78997B0036B6FA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7FB305F91B70E923006C5F41 /* ViewController.h */,
+				7FB305FA1B70E923006C5F41 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7F1EF1AE1B78998E0036B6FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3061F1B70F448006C5F41 /* NUCategory.h */,
+				7FB306201B70F448006C5F41 /* NUCategory.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		7FB305E61B70E923006C5F41 = {
 			isa = PBXGroup;
 			children = (
@@ -93,15 +162,11 @@
 			children = (
 				7FB305F61B70E923006C5F41 /* AppDelegate.h */,
 				7FB305F71B70E923006C5F41 /* AppDelegate.m */,
-				7FB306181B70E968006C5F41 /* WebServiceManager.h */,
-				7FB306191B70E968006C5F41 /* WebServiceManager.m */,
-				7FB3061B1B70EC2B006C5F41 /* WebServiceParser.h */,
-				7FB3061C1B70EC2B006C5F41 /* WebServiceParser.m */,
-				7FB3061F1B70F448006C5F41 /* NUCategory.h */,
-				7FB306201B70F448006C5F41 /* NUCategory.m */,
-				7FB3061E1B70ED19006C5F41 /* Constants.h */,
-				7FB305F91B70E923006C5F41 /* ViewController.h */,
-				7FB305FA1B70E923006C5F41 /* ViewController.m */,
+				7F1EF1AC1B7899140036B6FA /* Utility */,
+				7F1EF1AB1B7899020036B6FA /* WebService */,
+				7F1EF1A81B7898C90036B6FA /* ImageDownload */,
+				7F1EF1AE1B78998E0036B6FA /* Models */,
+				7F1EF1AD1B78997B0036B6FA /* ViewController */,
 				7FB305FC1B70E923006C5F41 /* Main.storyboard */,
 				7FB305FF1B70E923006C5F41 /* Images.xcassets */,
 				7FB306011B70E923006C5F41 /* LaunchScreen.xib */,
@@ -238,9 +303,12 @@
 			files = (
 				7FB3061A1B70E968006C5F41 /* WebServiceManager.m in Sources */,
 				7FB306211B70F448006C5F41 /* NUCategory.m in Sources */,
+				7FFF517F1B7386A10009E037 /* NSString+Additions.m in Sources */,
 				7FB305FB1B70E923006C5F41 /* ViewController.m in Sources */,
 				7FB305F81B70E923006C5F41 /* AppDelegate.m in Sources */,
 				7FB3061D1B70EC2B006C5F41 /* WebServiceParser.m in Sources */,
+				7FFF51781B73615B0009E037 /* ImageDownloader.m in Sources */,
+				7FFF517C1B73829D0009E037 /* ImageCache.m in Sources */,
 				7FB305F51B70E923006C5F41 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +504,7 @@
 				7FB306141B70E923006C5F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FB306151B70E923006C5F41 /* Build configuration list for PBXNativeTarget "NSUrlSessionTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +513,7 @@
 				7FB306171B70E923006C5F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

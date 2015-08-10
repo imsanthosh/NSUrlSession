@@ -30,7 +30,21 @@
                                     <constraint firstAttribute="width" constant="173" id="cUO-nG-KEq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7pV-gK-f0H">
+                                <rect key="frame" x="47" y="55" width="516" height="447"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-tc-ukv">
+                                <rect key="frame" x="191" y="528" width="218" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.75143914469999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="2zb-ml-P6q"/>
+                                    <constraint firstAttribute="height" constant="45" id="8aZ-qz-j2M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -38,13 +52,21 @@
                         <constraints>
                             <constraint firstItem="qe0-Ii-4yv" firstAttribute="top" secondItem="0ow-oO-o75" secondAttribute="bottom" constant="8" id="Dx7-i8-X2C"/>
                             <constraint firstAttribute="centerX" secondItem="qe0-Ii-4yv" secondAttribute="centerX" id="Jva-RM-R4W"/>
+                            <constraint firstItem="7pV-gK-f0H" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="P6U-lA-7zB"/>
                             <constraint firstAttribute="centerX" secondItem="0ow-oO-o75" secondAttribute="centerX" id="Sfn-5N-Dj4"/>
                             <constraint firstAttribute="centerY" secondItem="0ow-oO-o75" secondAttribute="centerY" id="TGG-Ta-bJ0"/>
+                            <constraint firstItem="7pV-gK-f0H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="47" id="Y27-KD-vYP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="g6W-tc-ukv" secondAttribute="bottom" constant="27" id="cwN-Yo-jLs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7pV-gK-f0H" secondAttribute="bottom" constant="98" id="qAR-PF-KOV"/>
+                            <constraint firstAttribute="centerX" secondItem="g6W-tc-ukv" secondAttribute="centerX" id="qvn-LT-a7b"/>
+                            <constraint firstAttribute="trailing" secondItem="7pV-gK-f0H" secondAttribute="trailing" constant="37" id="xJd-Ax-JlL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicatior" destination="0ow-oO-o75" id="htU-MB-SVC"/>
+                        <outlet property="imageView" destination="7pV-gK-f0H" id="2oG-Zx-8Oe"/>
                         <outlet property="label" destination="qe0-Ii-4yv" id="Pp0-J8-n0a"/>
+                        <outlet property="progressLabel" destination="g6W-tc-ukv" id="qWl-Wt-A3i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

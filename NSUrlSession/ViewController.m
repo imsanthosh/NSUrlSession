@@ -8,13 +8,20 @@
 
 #import "ViewController.h"
 #import "WebServiceManager.h"
-#import "Constants.h"
+#import "ImageCache.h"
 
-#import "NUCategory.h"
+#import "Constants.h"
+#import "Protocols.h"
+//#import "NUCategory.h"
+
+
+#import "NSString+Additions.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatior;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 
 @end
 
@@ -23,7 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self fetchCategoriesForMovie];
+//    [self fetchCategoriesForMovie];
+    [self fetchImage];
     
 }
 
@@ -45,22 +53,25 @@
 }
 
 #pragma mark - Request method
+- (void)fetchImage {
+    
+    NSString *url = @"http://www.hdwallpapers.in/walls/green_nature_dual_monitor-other.jpg";
+    [url SHA256String];
+    
+    [[ImageCache sharedCache] imageFromURL:url withCallbackHandler:^(UIImage *image, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imageView.image = image;
 
-- (void)fetchCategoriesForMovie {
-    
-    [self shouldShowActivityIndicator:YES];
-    __weak typeof(self) weakSelf = self;
-    
-    [[WebServiceManager sharedServiceManager] fetchContentsFromURL:@"" withRequestType:0 andCompletionHandler:^(id response, NSError *error) {
-        [weakSelf shouldShowActivityIndicator:NO];
-        if(response) {
-            
-            for (NUCategory *category in response) {
-                NSLog(@"categoryName:  %@",category.categoryName);
-            }
-        }
-        
+        });
     }];
-    
+
+     
 }
+//
+//#pragma FileDownloadTaskDelegate methods
+//-(void)downloadedPercentage:(float)percentage {
+//    _progressLabel.text = [NSString stringWithFormat:@"%f",percentage];
+//    
+//}
+
 @end
