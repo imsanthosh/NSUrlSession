@@ -15,6 +15,9 @@ typedef void (^NUcompletionHandler)(id response , NSError *error);
 
 + (instancetype)sharedServiceManager;
 
-- (void)fetchContentsFromURL:(NSString *)URLString withRequestType:(NSUInteger)requestType andCompletionHandler:(NUcompletionHandler)completionHandler;
+- (void)fetchContentsFromURL:(NSString *)URLString taskDescription:(NSString *)description withRequestType:(NSUInteger)requestType andCompletionHandler:(NUcompletionHandler)completionHandler;
+
+
+- (void)cancelTasksWithDescription:(NSString *)description;
 
 @end
