@@ -9,12 +9,5 @@
 #ifndef NSUrlSession_Protocols_h
 #define NSUrlSession_Protocols_h
 
-//
-//@protocol FileDownloadTaskDelegate <NSObject>
-//
-//@optional
-//-(void)downloadedPercentage:(float)percentage;
-//
-//@end
 
 #endif
